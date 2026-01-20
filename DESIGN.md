@@ -2,7 +2,6 @@
 
 By Osama Sobhy
 
-Video overview: <https://youtu.be/kWS25ILD3Go?si=3syM94HissYNpGZJ>
 
 ## Scope
 
@@ -19,6 +18,8 @@ Categories to organize products
 Products that can be purchased
 Orders created by users
 Order items that represent products inside an order
+Address represents physical addresses associated with users.
+Payment represents a payment transaction associated with an order.
 
 The database supports:
 Creating users and products
@@ -164,6 +165,25 @@ CHECK (quantity > 0) prevents meaningless order items
 CHECK (price_at_purchase > 0) prevents invalid prices
 FOREIGN KEY constraints enforce valid orders and products
 ON DELETE CASCADE ensures order items are removed when an order is deleted
+
+Address
+Attributes
+id
+user_id
+city
+country
+street
+building
+postal_code
+
+Payment
+Attributes
+id
+order_id
+method
+amount
+status
+paid_at
 
 Why These Design Choices
 The chosen data types and constraints ensure:
