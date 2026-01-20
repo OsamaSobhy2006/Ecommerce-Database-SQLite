@@ -35,7 +35,6 @@ The database includes the following tables:
 - `order_item`
 - `address`
 - `payment`
-- `review`
 
 ---
 
